@@ -1,4 +1,4 @@
-!/usr/bin/env ruby
+#!/usr/bin/env ruby
 
 require_relative "../lib/jukebox.rb"
 
@@ -13,24 +13,5 @@ songs = [
   "Harry Chapin - Cats in the Cradle",
   "Amos Lee - Keep It Loose, Keep It Tight"
 ]
-
-def run(songs)
-  help
-
-  input=gets.chomp
-  
-  if input=='help'
-    help
-  elsif input=='list'
-    list(songs)
-  elsif input=='play'
-    play(songs)
-  elsif input=='exit'
-    exit_jukebox
-  else
-    run(songs)
-  end
-
-end
 
 run(songs)
